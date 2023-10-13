@@ -4,7 +4,7 @@
 
 <head>
   <!-- The title of the webpage displayed in the browser -->
-  <title>YouTube Song Finder</title>
+  <title>YouTube Playlist Pulse</title>
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   <!-- Character encoding for special characters -->
   <meta charset="UTF-8">
@@ -26,7 +26,7 @@
           <img src="logo.png" alt="Logo" width="50px" height="auto" class="d-inline-block align-text-top">
         </a>
         <!-- Brand name in the center -->
-        <a class="navbar-brand mx-auto" href="#">YouTube Song Finder</a>
+        <a class="navbar-brand mx-auto" href="#">YouTube Playlist Pulse</a>
       </div>
       <!-- Toggler button for small screens -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -51,24 +51,26 @@
   <div class="row align-items-md-stretch">
     <div class="col-md-6">
       <div class=" container h-75 p-5 rounded-3 desc">
-        <h2 style="font-size: 40px;">YouTube Song Finder</h2>
-        <p style="font-size: 22px;">You can use the YouTube Song Finder to <u>search for up to 50 songs</u> at a time.
-          Simply enter the song names, separated by commas, in the text area and click the <b>"Find videos"</b> button.
-
+        <h2 style="font-size: 40px;">YouTube Playlist Pulse</h2>
+        <p style="font-size: 22px;">You can use the YouTube Playlist Pulse to <u>search for up to 50 topics</u> at a
+          time. The <b>Search is limited upto</b> 4,000 topics in a day. Simply enter the topics, separated by commas,
+          in the text area and click the <b>"Find videos"</b> button.
+          <button class="btn btn-outline-light" type="button">Example button</button>
       </div>
     </div>
     <div class="col-md-6">
       <form onsubmit="findSongs(); return false;">
         <textarea id="songs" name="songs" rows="10"
-          placeholder="Enter song names separated by commas: e.g. song 1, song 2, song 3 ...."
+          placeholder="Enter topics separated by commas: e.g. topic 1, topic 2, topic 3 ...."
           oninput="updateSongCount()"></textarea>
-        <span id="song-count">0 songs</span>
+        <span id="song-count">0 topics</span>
         <script>
           function updateSongCount() {
             const songsTextArea = document.getElementById("songs");
             const songs = songsTextArea.value.split(",");
             const songCountLabel = document.getElementById("song-count");
-            songCountLabel.textContent = `No. of songs: ${songs.length} song${songs.length !== 1 ? "s" : ""}`;
+            songCountLabel.textContent = `No. of topics: ${songs.length} topics${songs.length !== 1 ? "s" : ""}`;
+
 
             if (songs.length > 50) {
               songCountLabel.style.color = "red";
@@ -99,14 +101,14 @@
         <div class="text-center padd">
           <img class="about-img" src="about.png" alt="about">
           <h3 id="about" class="txt">&#x1F449;About Us</h3>
-          <p style="margin-bottom: 0px;">"Welcome to YouTube Song Finder, a tool created by a music enthusiast
-            who shares a passion for finding and discovering new music on YouTube. I understand the hassle of having to
-            search for songs one by one and created this tool to simplify the process. With YouTube Song Finder, you can
-            search for up to 50 songs at a time and discover new music with ease.
+          <p style="margin-bottom: 0px;">"Welcome to YouTube Playlist Pulse, a tool created by a team of students who
+            share a passion for finding and discovering different topics on YouTube. We understand the hassle of having
+            to search for topics one by one and created this tool to simplify the process. With YouTube Playlist Pulse,
+            you can search for up to 50 topics at a time and discover topics with ease.
 
-            My goal is to make the process of finding music on YouTube simple and hassle-free. I hope that my tool
-            will bring joy and excitement to your music discovery journey.
-            Thank you for using YouTube Song Finder, and happy music searching!"</p>
+            Our goal is to make the process of finding topics on YouTube simple and hassle-free. We hope that our tool
+            will bring joy and excitement to your different topics discovery journey.
+            Thank you for using YouTube Playlist Pulse, and happy searching!"</p>
         </div>
         <div
           style="width: 25%; border-top: 1.5px dotted; border-bottom: 0px; border-left: 0px; border-right: 0px; margin: auto;">
@@ -117,16 +119,18 @@
           <ul class="list-unstyled">
             <li>If you have any feedback or suggestions, we would love to hear from you. Please feel free to reach out
               to me.</li>
-              <li>
-                <img class="nit-logo" src="https://upload.wikimedia.org/wikipedia/en/7/75/National_Institute_of_Technology%2C_Kurukshetra_Logo.png" alt="">
-              </li>
+            <li>
+              <img class="nit-logo"
+                src="https://upload.wikimedia.org/wikipedia/en/7/75/National_Institute_of_Technology%2C_Kurukshetra_Logo.png"
+                alt="">
+            </li>
             <li>
               Name: Kapil
             </li>
-            <li> 
+            <li>
               Roll no.: 12015057
             </li>
-            <li> 
+            <li>
               Branch: Electronics & Communication Engineering(ECE)
             </li>
             <li>
@@ -142,9 +146,9 @@
     class="fixed-bottom bg-dark text-white p-3">
     <div style="font-size: 18px; text-align: center;" class="container-fluid text-center">
       <span style="font-weight: bold;">Made by Kapil (Roll No. 12015057)</span>
-</div>
-    
-    
+    </div>
+
+
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
