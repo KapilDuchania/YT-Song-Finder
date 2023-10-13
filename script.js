@@ -5,19 +5,18 @@ function findSongs() {
 
   const input = document.getElementById("songs").value.trim();
   if (input === "") {
-    alert("Please enter at least one song name.");
+    alert("Please enter at least one topic.");
     return;
   }
-  const songs = input.split(",").map(song => song.trim()).filter(song => song !== "");
+  const songs = input.split(",").filter((song) => song.trim() !== "");
   if (songs.length === 0) {
-    alert("Please enter at least one valid song name.");
+    alert("Please enter at least one valid topic.");
     return;
   }
   if (songs.length > 50) {
-    alert("Maximum number of songs you can search at a time is 50.");
+    alert("Maximum no.of topics you can search at a time is 50.");
     return;
   }
-
   const output = document.getElementById("output");
   output.innerHTML = "";
 
